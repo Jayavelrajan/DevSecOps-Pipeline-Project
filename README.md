@@ -100,7 +100,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 
 
 
-**Phase 2: Security**
+### **Phase 2: Security**
 
 **Step 6: Install SonarQube and Trivy**
     - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
@@ -116,7 +116,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
         publicIP:9000 (by default username & password is admin)
 
 <div align="center">
-  <img src="./public/screenshots/netflix-home2.png" alt="apikey" width="100%" height="100%">
+  <img src="./public/screenshots/sonarqube-01.png" alt="apikey" width="100%" height="100%">
 </div>
         
         
@@ -141,7 +141,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 
 **Phase 3: CI/CD Setup**
 
-1. **Install Jenkins for Automation:**
+ **Step 7: Install Jenkins for Automation:**
     - Install Jenkins on the EC2 instance to automate deployment:
     Install Java
     
@@ -168,6 +168,10 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     - Access Jenkins in a web browser using the public IP of your EC2 instance.
         
         publicIp:8080
+
+<div align="center">
+  <img src="./public/screenshots/jenkins-2-01.png" alt="apikey" width="100%" height="100%">
+</div>   
         
 2. **Install Necessary Plugins in Jenkins:**
 
@@ -374,16 +378,14 @@ pipeline{
         }
     }
 }
-
-
-If you get docker login failed errorr
-
-sudo su
-sudo usermod -aG docker jenkins
-sudo systemctl restart jenkins
-
-
 ```
+
+**Step 8: In this step we need to create aws ec2 instance(t2.medium)**
+
+<div align="center">
+  <img src="./public/screenshots/t2.medium.png" alt="apikey" width="100%" height="100%">
+</div>
+
 
 **Phase 4: Monitoring**
 
@@ -582,6 +584,10 @@ sudo systemctl restart jenkins
    You can access Prometheus targets at:
 
    `http://<your-prometheus-ip>:9090/targets`
+<div align="center">
+  <img src="./public/screenshots/prometheus-01.png" alt="apikey" width="100%" height="100%">
+</div>
+   
 
 
 ####Grafana
