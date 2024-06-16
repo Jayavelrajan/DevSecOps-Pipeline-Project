@@ -17,6 +17,8 @@
 
 # Cloud Deployment of Netflix Clone Using Jenkins - A DevSecOps Approach
 
+### **Phase 1: Initial Setup and Deployment**
+
 **Step 1: Launch EC2 (Ubuntu 24.04 LTS)**
 
 - Provision an EC2 instance(t2.large) on AWS with Ubuntu 24.04 LTS.
@@ -33,9 +35,18 @@
 <div align="center">
   <img src="./public/screenshots/eip.png" alt="eip" width="100%" height="100%">
 </div>
+
+**Step 3: Clone the Code**
+
+- Update all the packages and then clone the code.
+- Clone your application's code repository onto the EC2 instance:
+    
+    ```bash
+    git clone https://github.com/Jayavelrajan/DevSecOps-Pipeline-Project.git
+    ```
     
 
-**Step 3: Install Docker and Run the App Using a Container:**
+**Step 4: Install Docker and Run the App Using a Container:**
 
 - Set up Docker on the EC2 instance:
     
@@ -59,9 +70,7 @@
     docker rmi -f netflix
     ```
 
-It will show an error cause you need API key
-
-**Step 4: Get the API Key:**
+**Step 5: Get the API Key**
 
 - Open a web browser and navigate to TMDB (The Movie Database) website.
 - Click on "Login" and create an account.
@@ -76,9 +85,24 @@ Now recreate the Docker image with your api key:
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 ```
 
+<div align="center">
+  <img src="./public/screenshots/apikey.png" alt="apikey" width="100%" height="100%">
+</div>
+
+
+<div align="center">
+  <img src="./public/screenshots/netflix-home1.png" alt="apikey" width="100%" height="100%">
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/netflix-home2.png" alt="apikey" width="100%" height="100%">
+</div>
+
+
+
 **Phase 2: Security**
 
-1. **Install SonarQube and Trivy:**
+**Step 6: Install SonarQube and Trivy**
     - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
         
         sonarqube
@@ -90,6 +114,11 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
         To access: 
         
         publicIP:9000 (by default username & password is admin)
+
+<div align="center">
+  <img src="./public/screenshots/netflix-home2.png" alt="apikey" width="100%" height="100%">
+</div>
+        
         
         To install Trivy:
         ```
