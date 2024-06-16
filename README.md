@@ -774,63 +774,11 @@ You'll be prompted to log in to Grafana. The default username is "admin," and th
 </div>
 
 **Step 11: Create aws Elastic Kubernetes Service**
+
 <div align="center">
-  <img src="./public/screenshots/graphana1-02.png" alt="apikey" width="100%" height="100%">
+  <img src="./public/screenshots/kube.jpg" alt="apikey" width="100%" height="100%">
 </div>
 
-
-**Step 8: Change the Default Password:**
-
-When you log in for the first time, Grafana will prompt you to change the default password for security reasons. Follow the prompts to set a new password.
-
-**Step 9: Add Prometheus Data Source:**
-
-To visualize metrics, you need to add a data source. Follow these steps:
-
-- Click on the gear icon (⚙️) in the left sidebar to open the "Configuration" menu.
-
-- Select "Data Sources."
-
-- Click on the "Add data source" button.
-
-- Choose "Prometheus" as the data source type.
-
-- In the "HTTP" section:
-  - Set the "URL" to `http://localhost:9090` (assuming Prometheus is running on the same server).
-  - Click the "Save & Test" button to ensure the data source is working.
-
-**Step 10: Import a Dashboard:**
-
-To make it easier to view metrics, you can import a pre-configured dashboard. Follow these steps:
-
-- Click on the "+" (plus) icon in the left sidebar to open the "Create" menu.
-
-- Select "Dashboard."
-
-- Click on the "Import" dashboard option.
-
-- Enter the dashboard code you want to import (e.g., code 1860).
-
-- Click the "Load" button.
-
-- Select the data source you added (Prometheus) from the dropdown.
-
-- Click on the "Import" button.
-
-You should now have a Grafana dashboard set up to visualize metrics from Prometheus.
-
-Grafana is a powerful tool for creating visualizations and dashboards, and you can further customize it to suit your specific monitoring needs.
-
-That's it! You've successfully installed and set up Grafana to work with Prometheus for monitoring and visualization.
-
-2. **Configure Prometheus Plugin Integration:**
-    - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
-
-
-**Phase 5: Notification**
-
-1. **Implement Notification Services:**
-    - Set up email notifications in Jenkins or other notification mechanisms.
 
 # Phase 6: Kubernetes
 
@@ -906,3 +854,9 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 
 1. **Cleanup AWS EC2 Instances:**
     - Terminate AWS EC2 instances that are no longer needed.
+  
+<div align="center">
+  <img src="./public/screenshots/netflix-home1.png" alt="apikey" width="100%" height="100%">
+</div>
+
+**The application has been successfully deployed using DevOps practices!!**
