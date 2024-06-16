@@ -17,11 +17,10 @@
 
 # Cloud Deployment of Netflix Clone Using Jenkins - A DevSecOps Approach
 
-### **Phase 1: Initial Setup and Deployment**
-
 **Step 1: Launch EC2 (Ubuntu 24.04 LTS):**
 
 - Provision an EC2 instance(t2.large) on AWS with Ubuntu 24.04 LTS.
+  
 - Connect to the instance using SSH.
 
 **Step 2: Clone the Code:**
