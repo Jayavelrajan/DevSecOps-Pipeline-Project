@@ -11,31 +11,28 @@
 <br />
 
 <div align="center">
-  <img src="./public/netflix-homescreen.png" alt="Logo" width="100%" height="100%">
+  <img src="./public/netflix-homescreen.png" alt="homescreen" width="100%" height="100%">
   <p align="center">Home Page</p>
 </div>
 
 # Cloud Deployment of Netflix Clone Using Jenkins - A DevSecOps Approach
 
-**Step 1: Launch EC2 (Ubuntu 24.04 LTS):**
+**Step 1: Launch EC2 (Ubuntu 24.04 LTS)**
 
 - Provision an EC2 instance(t2.large) on AWS with Ubuntu 24.04 LTS.
+<div align="center">
+  <img src="./public/screenshots/launch.png" alt="launch" width="100%" height="100%">
+</div>
   
 - Connect to the instance using SSH.
 
-**Step 2: Clone the Code:**
+**Step 2: Allocate elastic ip address**
 
 - Update all the packages and then clone the code.
 - Clone your application's code repository onto the EC2 instance:
-
-  <div align="center">
-  <img src="./public/netflix-homescreen.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Home Page</p>
+<div align="center">
+  <img src="./public/screenshots/eip.png" alt="eip" width="100%" height="100%">
 </div>
-    
-    ```bash
-    git clone https://github.com/N4si/DevSecOps-Project.git
-    ```
     
 
 **Step 3: Install Docker and Run the App Using a Container:**
