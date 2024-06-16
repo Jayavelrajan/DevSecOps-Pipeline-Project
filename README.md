@@ -697,9 +697,9 @@ http://<your-prometheus-ip>:9090/targets
 
 
 
-####Grafana
+##Grafana
 
-**Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
+**Step 10: Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus**
 
 **Step 1: Install Dependencies:**
 
@@ -764,6 +764,20 @@ Open a web browser and navigate to Grafana using your server's IP address. The d
 `http://<your-server-ip>:3000`
 
 You'll be prompted to log in to Grafana. The default username is "admin," and the default password is also "admin."
+
+<div align="center">
+  <img src="./public/screenshots/graphana1-01.png" alt="apikey" width="100%" height="100%">
+</div>
+
+<div align="center">
+  <img src="./public/screenshots/graphana1-02.png" alt="apikey" width="100%" height="100%">
+</div>
+
+**Step 11: Create aws Elastic Kubernetes Service**
+<div align="center">
+  <img src="./public/screenshots/graphana1-02.png" alt="apikey" width="100%" height="100%">
+</div>
+
 
 **Step 8: Change the Default Password:**
 
